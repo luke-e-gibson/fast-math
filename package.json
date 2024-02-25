@@ -1,0 +1,28 @@
+{
+  "name": "fast-math",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "license": "Apache-2.0",
+  "gypfile": true,
+  "author": "Luke Gibson",
+
+  "directories": {
+    "test": "test"
+  },
+
+  "scripts": {
+    "build-cpp": "node-gyp build",
+    "configure": "node-gyp configure",
+    "test": "node ./test/test1.js",
+    "install": "node-gyp rebuild",
+    "build-run": "node-gyp build & npm run test"
+  },
+  
+  "dependencies": {
+    "node-addon-api": "*"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.0"
+  }
+}
